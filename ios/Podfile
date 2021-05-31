@@ -12,6 +12,8 @@ target 'react_native_crud' do
     :hermes_enabled => false
   )
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'react_native_crudTests' do
     inherit! :complete
     # Pods for testing
