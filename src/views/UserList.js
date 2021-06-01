@@ -13,7 +13,7 @@ export default props =>{
             <View>
                 <ListItem
                 bottomDivider
-                onPress={()=>props.navigation.navigate('UserForm')}
+                onPress={()=>props.navigation.navigate('UserForm',user)}
                 // rightElement={<Icon name="edit" size={25}  color='#f00'  ></Icon>}
                 key={user.id}>
                     <Avatar rounded size="large" source={{uri: user.avatarUrl}} />
@@ -22,7 +22,7 @@ export default props =>{
                     <ListItem.Subtitle>{user.email}</ListItem.Subtitle>
                     </ListItem.Content>
                     <Icon name={'edit'} color="orange" 
-                    onPress={()=>Alert.alert("Edit clicado")}
+                    onPress={()=>props.navigation.navigate('UserForm',user)}
                     />
                     <Icon name={'delete'} color="red" 
                     onPress={()=>Alert.alert("CONFIRMAR EXCLUSÃO","Deseja exclui "+`${user.name}`+" ?",[
